@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".ui.activity.JdActivity">
         </activity>
+        <activity android:name=".ui.activity.TMallActivity">
+        </activity>
     </application>
 
 </manifest>
