@@ -67,10 +67,8 @@ public class JdActivity extends AppCompatActivity {
                 mAdapter.addData(0,mNewStrings);
                 mJdRefreshLayout.refreshComplete();
 
-
-
             }
-        },1000);
+        },3000);
 
 
 

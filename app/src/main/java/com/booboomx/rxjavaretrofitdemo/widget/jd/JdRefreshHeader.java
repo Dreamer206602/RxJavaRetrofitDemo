@@ -20,7 +20,7 @@ import in.srain.cube.views.ptr.PtrUIHandler;
 import in.srain.cube.views.ptr.indicator.PtrIndicator;
 
 /**
- * Created by booboomx on 17/2/6.
+ * Created by booboomx on 17/tree2/6.
  */
 
 /**
@@ -79,11 +79,11 @@ public class JdRefreshHeader extends FrameLayout implements PtrUIHandler {
 
     private void initView() {
 
-        View view= LayoutInflater.from(getContext()).inflate(R.layout.jd_refresh_head_view,this,false);
+        View view= LayoutInflater.from(getContext()).inflate(R.layout.tree_refresh_head_view,this,false);
 
         mTvRemind= (TextView) view.findViewById(R.id.tv_remain);
         mIvMain= (ImageView) view.findViewById(R.id.iv_man);
-        mIvGoods= (ImageView) view.findViewById(R.id.iv_goods);
+//        mIvGoods= (ImageView) view.findViewById(R.id.iv_goods);
         addView(view);
 
     }
@@ -93,9 +93,6 @@ public class JdRefreshHeader extends FrameLayout implements PtrUIHandler {
     public void onUIReset(PtrFrameLayout frame) {
         mState=STATE_RESET;
         Log.i(TAG, "onUIReset: ");
-
-
-
 
     }
 
@@ -111,13 +108,14 @@ public class JdRefreshHeader extends FrameLayout implements PtrUIHandler {
         Log.i(TAG, "onUIRefreshBegin: ");
         mState=STATE_BEGIN;
         // 隐藏商品的logo，开启跑步的动画
-        mIvGoods.setVisibility(GONE);
-        mIvMain.setBackgroundResource(R.drawable.runningman);
+        // TODO
+//        mIvGoods.setVisibility(GONE);
+//        mIvMain.setBackgroundResource(R.drawable.runningman);
+        mIvMain.setBackgroundResource(R.drawable.runningtree);
         mAnimation= (AnimationDrawable) mIvMain.getBackground();
         if(!mAnimation.isRunning()){
             mAnimation.start();
         }
-
 
 
     }
@@ -126,12 +124,14 @@ public class JdRefreshHeader extends FrameLayout implements PtrUIHandler {
     public void onUIRefreshComplete(PtrFrameLayout frame) {
         Log.i(TAG, "onUIRefreshComplete: ");
         mState=STATE_FINISH;
-        mIvGoods.setVisibility(VISIBLE);
+        // TODO
+//        mIvGoods.setVisibility(VISIBLE);
         //停止动画
         if(mAnimation.isRunning()){
             mAnimation.stop();
         }
-        mIvMain.setBackgroundResource(R.mipmap.a2a);
+//        mIvMain.setBackgroundResource(R.mipmap.a2a);
+        mIvMain.setBackgroundResource(R.mipmap.tree5);
 
     }
 
@@ -144,21 +144,21 @@ public class JdRefreshHeader extends FrameLayout implements PtrUIHandler {
                 Log.i(TAG, "onUIPositionChange: STATE_PREPARE");
                 // logo设置
                 mIvMain.setAlpha(ptrIndicator.getCurrentPercent());
-                mIvGoods.setAlpha(ptrIndicator.getCurrentPercent());
+//                mIvGoods.setAlpha(ptrIndicator.getCurrentPercent());
                 FrameLayout.LayoutParams mIvMainLayoutParams = (LayoutParams) mIvMain.getLayoutParams();
                 if(ptrIndicator.getCurrentPercent()<=1){
                     mIvMain.setScaleX(ptrIndicator.getCurrentPercent());
                     mIvMain.setScaleY(ptrIndicator.getCurrentPercent());
 
-                    mIvGoods.setScaleX(ptrIndicator.getCurrentPercent());
-                    mIvGoods.setScaleY(ptrIndicator.getCurrentPercent());
+//                    mIvGoods.setScaleX(ptrIndicator.getCurrentPercent());
+//                    mIvGoods.setScaleY(ptrIndicator.getCurrentPercent());
 
                     int marginRight= (int) (MARGIN_RIGHT-MARGIN_RIGHT*ptrIndicator.getCurrentPercent());
                     mIvMainLayoutParams.setMargins(0,0,marginRight,0);
                     mIvMain.setLayoutParams(mIvMainLayoutParams);
                 }
 
-                if(ptrIndicator.getCurrentPercent()<1.5){
+                if(ptrIndicator.getCurrentPercent()<1.2){
                     mTvRemind.setText("下拉刷新...");
                 }else{
                     mTvRemind.setText("松开刷新...");
