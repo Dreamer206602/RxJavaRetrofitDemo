@@ -5,6 +5,9 @@
 
     <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:name=".app.BaseApplication"
         android:allowBackup="true"
@@ -25,6 +28,8 @@
         <activity android:name=".ui.activity.TMallActivity">
         </activity>
         <activity android:name=".ui.activity.RxJavaActivity">
+        </activity>
+        <activity android:name=".ui.activity.LoadWebViewActivity">
         </activity>
     </application>
 
