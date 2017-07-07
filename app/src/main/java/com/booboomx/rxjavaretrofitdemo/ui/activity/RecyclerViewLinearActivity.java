@@ -19,20 +19,11 @@ public class RecyclerViewLinearActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view_linear);
-
         mRecyclerView= (RecyclerView) findViewById(R.id.recyclerView);
-
-
         for (int i = 0; i < 20; i++) {
-
             mStrings.add("Android===>"+i);
         }
-
         mAdapter.addData(mStrings);
         mRecyclerView.setAdapter(mAdapter);
-
-
-
-
     }
 }

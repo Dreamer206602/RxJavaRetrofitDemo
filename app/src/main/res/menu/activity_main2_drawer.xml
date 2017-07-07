@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_jd"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="京东下拉刷新"/>
+        <item
+            android:id="@+id/nav_tm"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="天猫下拉刷新"/>
+        <item
+            android:id="@+id/nav_webview"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="WebView"/>
+        <item
+            android:id="@+id/nav_parallaxScrollView"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="parallaxScrollView"/>
+
+        <item
+            android:id="@+id/nav_bottom_navigation"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="BottomNavigation"
+            />
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="登录"
+            />
+        <item
+            android:id="@+id/nav_scrolling"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Scrolling"
+            />
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share"/>
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send"/>
+        </menu>
+    </item>
+
+</menu>
