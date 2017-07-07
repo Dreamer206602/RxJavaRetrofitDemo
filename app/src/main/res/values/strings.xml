@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">RxJavaRetrofitDemo</string>
+
+
+
+
+    <string name="LinearLayoutManager">LinearLayoutManager</string>
+
+
+
+
+
+
 </resources>

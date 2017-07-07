@@ -33,6 +33,8 @@
         </activity>
         <activity android:name=".ui.activity.ImageActivity">
         </activity>
+        <activity android:name=".ui.activity.RecyclerViewLinearActivity">
+        </activity>
     </application>
 
 </manifest>

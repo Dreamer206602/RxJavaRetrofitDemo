@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         mButtonJD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, JdActivity.class));
+//                startActivity(new Intent(MainActivity.this, JdActivity.class));
+                startActivity(new Intent(MainActivity.this, RecyclerViewLinearActivity.class));
             }
         });
         mButtonTmall.setOnClickListener(new View.OnClickListener() {
