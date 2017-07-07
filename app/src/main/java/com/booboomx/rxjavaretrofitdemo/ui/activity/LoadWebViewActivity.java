@@ -48,7 +48,10 @@ public class LoadWebViewActivity extends AppCompatActivity {
         // 格式规定为:file:///android_asset/文件名.html
 //        mWebView.loadUrl("file:///android_asset/image.html");
 
-        mWebView.loadUrl("http://www.toutiao.com/a6401738581286682881/#p=1");
+//        mWebView.loadUrl("http://www.toutiao.com/a6401738581286682881/#p=1");
+
+        mWebView.loadUrl("http://www.toutiao.com/a6405658200192205058/");
+
 
 
         //载入js
@@ -74,19 +77,6 @@ public class LoadWebViewActivity extends AppCompatActivity {
 
             }
         });
-
-//        mWebView.setWebViewClient(new WebViewClient() {
-//            @Override
-//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-//                if (url.endsWith(".jpg") || url.endsWith(".jpeg") || url.endsWith(".png") || url.endsWith(".JPG") || url.endsWith(".JPEG") || url.endsWith(".PNG")) {
-////                    openImageActivity(url);
-//                    return true;
-//                }
-//                return super.shouldOverrideUrlLoading(view, url);
-//            }
-//        });
-
-
 
 
     }

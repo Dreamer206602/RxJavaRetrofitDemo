@@ -1,1 +1,5 @@
 /build
+build.gradle
+app.iml
+proguard-rules.pro
+

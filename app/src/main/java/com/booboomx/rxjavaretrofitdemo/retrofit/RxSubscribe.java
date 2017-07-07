@@ -18,7 +18,6 @@ public abstract class RxSubscribe<T> extends Subscriber<T> {
     private Context mContext;
     private SweetAlertDialog mDialog;
     private String msg;
-
     public boolean showDialog(){
         return true;
     }
