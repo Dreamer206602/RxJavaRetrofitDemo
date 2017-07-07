@@ -34,6 +34,10 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Scrolling"
             />
+        <item
+            android:id="@+id/nav_bottom_dialog"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="BottomDialog" />
 
 
     </group>

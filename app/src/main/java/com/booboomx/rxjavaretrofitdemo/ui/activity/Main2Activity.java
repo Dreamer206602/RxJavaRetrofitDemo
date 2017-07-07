@@ -1,5 +1,6 @@
 package com.booboomx.rxjavaretrofitdemo.ui.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -106,6 +107,8 @@ public class Main2Activity extends AppCompatActivity
             startActivity(new Intent(this, LoginActivity.class));
         } else if (id == R.id.nav_scrolling) {
             startActivity(new Intent(this, ScrollingActivity.class));
+        } else if (id == R.id.nav_bottom_dialog) {
+            startActivity(new Intent(this, BottomDialogActivity.class));
         }
 
 
