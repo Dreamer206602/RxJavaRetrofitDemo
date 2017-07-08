@@ -1,6 +1,8 @@
 package com.booboomx.rxjavaretrofitdemo.ui.activity;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.booboomx.rxjavaretrofitdemo.R;
 import com.booboomx.rxjavaretrofitdemo.ui.activity.system.LoginActivity;
@@ -22,7 +25,9 @@ import com.booboomx.rxjavaretrofitdemo.ui.activity.system.ScrollingActivity;
 import com.booboomx.rxjavaretrofitdemo.ui.activity.system.SettingsActivity;
 
 public class Main2Activity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+
+    private Button mBtnWechaScan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +53,10 @@ public class Main2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        mBtnWechaScan= (Button) findViewById(R.id.btn_jump_wechat_scan);
+        mBtnWechaScan.setOnClickListener(this);
     }
 
     @Override
@@ -116,4 +125,28 @@ public class Main2Activity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_jump_wechat_scan:
+                toWeChatScanDirect(this);
+                break;
+        }
+    }
+
+
+    public static void toWeChatScanDirect(Context context) {
+        try {
+            Intent intent = new Intent();
+            intent.setComponent(new ComponentName("com.tencent.mm", "com.tencent.mm.ui.LauncherUI"));
+            intent.putExtra("LauncherUI.From.Scaner.Shortcut", true);
+            intent.setFlags(335544320);
+            intent.setAction("android.intent.action.VIEW");
+            context.startActivity(intent);
+        } catch (Exception e) {
+        }
+    }
+
+
 }
