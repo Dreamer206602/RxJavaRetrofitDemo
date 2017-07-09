@@ -27,7 +27,7 @@ import com.booboomx.rxjavaretrofitdemo.ui.activity.system.SettingsActivity;
 public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-    private Button mBtnWechaScan;
+    private Button mBtnWechaScan,mBtnOfoEye;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,10 @@ public class Main2Activity extends AppCompatActivity
 
 
         mBtnWechaScan= (Button) findViewById(R.id.btn_jump_wechat_scan);
+        mBtnOfoEye= (Button) findViewById(R.id.btn_ofo_eye);
+
         mBtnWechaScan.setOnClickListener(this);
+        mBtnOfoEye.setOnClickListener(this);
     }
 
     @Override
@@ -131,6 +134,10 @@ public class Main2Activity extends AppCompatActivity
         switch (v.getId()){
             case R.id.btn_jump_wechat_scan:
                 toWeChatScanDirect(this);
+                break;
+
+            case R.id.btn_ofo_eye:
+                startActivity(new Intent(this,OfoEyeActivity.class));
                 break;
         }
     }
