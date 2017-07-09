@@ -18,17 +18,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".ui.activity.JdActivity"></activity>
-        <activity android:name=".ui.activity.TMallActivity"></activity>
-        <activity android:name=".ui.activity.RxJavaActivity"></activity>
-        <activity android:name=".ui.activity.LoadWebViewActivity"></activity>
-        <activity android:name=".ui.activity.ImageActivity"></activity>
-        <activity android:name=".ui.activity.RecyclerViewLinearActivity"></activity>
+        <activity android:name=".ui.activity.JdActivity" />
+        <activity android:name=".ui.activity.TMallActivity" />
+        <activity android:name=".ui.activity.RxJavaActivity" />
+        <activity android:name=".ui.activity.LoadWebViewActivity" />
+        <activity android:name=".ui.activity.ImageActivity" />
+        <activity android:name=".ui.activity.RecyclerViewLinearActivity" />
         <activity
             android:name=".ui.activity.system.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_fullscreen"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
         <activity
             android:name=".ui.activity.Main2Activity"
             android:label="@string/title_activity_main2"
@@ -41,18 +41,19 @@
         </activity>
         <activity
             android:name=".ui.activity.system.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".ui.activity.system.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activity.system.SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".ui.activity.system.MainActivity"
-            android:label="@string/title_activity_main"></activity>
-        <activity android:name=".ui.activity.BottomDialogActivity"></activity>
+            android:label="@string/title_activity_main" />
+        <activity android:name=".ui.activity.BottomDialogActivity" />
+        <activity android:name=".ui.activity.OfoEyeActivity"></activity>
     </application>
 
 </manifest>

@@ -17,5 +17,12 @@
         android:gravity="center"
         android:text="打开微信扫一扫功能" />
 
+    <Button
+        android:id="@+id/btn_ofo_eye"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ofo首页眼睛跟随加速器移动" />
+
 
 </LinearLayout>
