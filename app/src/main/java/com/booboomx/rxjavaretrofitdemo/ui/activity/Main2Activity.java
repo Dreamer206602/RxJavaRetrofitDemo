@@ -137,7 +137,8 @@ public class Main2Activity extends AppCompatActivity
                 break;
 
             case R.id.btn_ofo_eye:
-                startActivity(new Intent(this,OfoEyeActivity.class));
+//                startActivity(new Intent(this,OfoEyeActivity.class));
+                startActivity(new Intent(this,DragPhotoActivity.class));
                 break;
         }
     }
