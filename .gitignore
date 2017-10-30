@@ -8,3 +8,7 @@
 /captures
 .externalNativeBuild
 libs/
+.idea
+RxJavaRetrofitDemo.iml
+app/app.iml
+
